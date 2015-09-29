@@ -1,0 +1,56 @@
+// Place all the styles related to the mypage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.line{
+    border-width: 2px;
+    border-bottom-width:2px;
+    border-bottom-color:#c8ccc1;
+    border-bottom-style: solid;
+    padding-left: 0px;
+}
+.menu {
+   float:left;
+   background:#fff;
+   overflow:hidden;
+   position:relative;
+}
+.menu ul {
+   clear:left;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+   position:relative;
+   left:50%;
+}
+.menu ul li {
+   display:block;
+   float:left;
+   list-style:none;
+   margin-right:1em;
+   padding:0;
+   position:relative;
+   right:50%;
+   width:100px;
+   text-align: center;
+}
+.menu ul li a {
+   display:block;
+   margin:0 0 0 1px;
+   padding:3px 10px;
+   background:#c8ccc1;
+   color:#fff;
+   text-decoration:none;
+   line-height:1.3em;
+}
+.menu ul li a:hover {
+   text-decoration: none;
+   color:#fff;
+}
+.menu ul li a.active,
+.menu ul li a.active:hover {
+   background:#000;
+   font-weight:bold;
+}

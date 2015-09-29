@@ -1,0 +1,131 @@
+<div class="container bucket-container each-container">
+    <div class="bucket-main">
+        <h1>
+            상품 리스트
+            <% unless current_user.nil? %>
+            <% if current_user.admin == 2 %>
+                <a class="btn btn-lg btn-primary pull-right" href="/shop/add">등록</a>
+            <% end %>
+            <% end %>
+        </h1>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="tabbable-line">
+                <ul class="nav nav-tabs ">
+                    <li class="active">
+                        <a href="#tab_default_1" data-toggle="tab">
+                        생두 </a>
+                    </li>
+                    <li>
+                        <a href="#tab_default_2" data-toggle="tab">
+                        핸드드립 </a>
+                    </li>
+                    <li>
+                        <a href="#tab_default_3" data-toggle="tab">
+                        머신 </a>
+                    </li>
+                </ul>
+                <br>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab_default_1">
+                        <h1>생두</h1>
+                        <div class="col-md-12">
+                            <div class="col-sm-6 col-md-4">
+                                <a href="/shop/detail/">
+                                    <div class="thumbnail" >
+                                        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT7JU_x0OFtxJ2BwVGu0aka4HBVzwnUhic67JVafKatC4NwVW56" class="img-responsive">
+                                        <div class="caption">
+                                            <div class="row">
+                                                <div class="col-md-6 col-xs-6">
+                                                    <h3 style="color:red">과테말라</h3>
+                                                </div>
+                                                <div class="col-md-6 col-xs-6 price">
+                                                    <h3>
+                                                    <label>11,220,000원</label></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>                     
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab_default_2">
+                        <h1>핸드드립</h1>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab_default_1">
+                                <div class="col-md-12">
+                                    <div class="col-sm-6 col-md-4">
+                                        <a href="/shop/detail/">
+                                            <div class="thumbnail" >
+                                                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT7JU_x0OFtxJ2BwVGu0aka4HBVzwnUhic67JVafKatC4NwVW56" class="img-responsive">
+                                                <div class="caption">
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-xs-6">
+                                                            <h3 style="color:red">Hario V60</h3>
+                                                        </div>
+                                                        <div class="col-md-6 col-xs-6 price">
+                                                            <h3>
+                                                            <label>11,220,000원</label></h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>                     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% @shops.each do |shop| %>
+                        <div class="col-sm-4 col-md-4 col-lg-4 thumbnail">
+                            <div>
+                                <a href="/shop/detail/<%= shop.id %>">
+                                    <img src="<%= shop.thumbnail.url %>" width="300" height="300">
+                                <hr style="margin:8px 0px">
+                                <div>
+                                    <div>
+                                        <h4 class="col-sm-8">
+                                            <a href="/shop/detail/<%= shop.id %>"><%= shop.name %></a>
+                                        </h4>
+                                        <h4 class="col-sm-4">
+                                          <%= shop.price %>원
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% end %>
+                    <div class="tab-pane" id="tab_default_3">
+                        <h1>머신</h1>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab_default_1">
+                                <div class="col-md-12">
+                                    <div class="col-sm-6 col-md-4">
+                                        <a href="/shop/detail/">
+                                            <div class="thumbnail" >
+                                                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT7JU_x0OFtxJ2BwVGu0aka4HBVzwnUhic67JVafKatC4NwVW56" class="img-responsive">
+                                                <div class="caption">
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-xs-6">
+                                                            <h3 style="color:red">스트롱홀드 S7</h3>
+                                                        </div>
+                                                        <div class="col-md-6 col-xs-6 price">
+                                                            <h3>
+                                                            <label>11,220,000원</label></h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>                     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

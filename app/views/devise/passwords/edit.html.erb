@@ -1,0 +1,25 @@
+<div class="row">
+   <div class="col-md-3"></div>
+   <div class="col-md-6">
+      <div align="center">
+         <h2>비밀번호 변경</h2>
+      </div>
+      
+      <%= bootstrap_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+         <%= f.hidden_field :reset_password_token %>
+      
+        <%= f.password_field :password, autofocus: true, autocomplete: "off",label:"비밀번호" %>
+        <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+        <% end %>
+   
+        <%= f.password_field :password_confirmation, autocomplete: "off",label:"비밀번호 확인" %>
+      
+      <div align="center"> 
+        <button type="submit" class="btn btn-danger" >비밀번호 변경</button>
+      </div>
+      <% end %>
+      
+      <%= render "devise/shared/links" %>
+   </div>
+</div>

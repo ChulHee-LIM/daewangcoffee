@@ -1,0 +1,22 @@
+<div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="editlabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content" id="eidtlabel" style="padding:20px">
+      <div class="row">
+        <div class="col-md-1 col-xs-0 col-sm-0 col-lg-1"></div>
+        <div class="col-md-10 col-xs-12 col-sm-12 col-lg-10">
+          <%= form_tag "/contact/mailing", method: "post", multipart: true do %>
+            <div class="form-group">
+              <label >제목</label>
+              <input type="text" class="form-control" class="form-control" placeholder="Title" name="title" required></input>
+            </div>
+            <div class="form-group">
+              <label >문의 내용</label>
+              <textarea class="form-control" rows="10" class="form-control" placeholder="Content" name="content" required></textarea>
+            </div>       
+            <button type="submit" class="btn btn-danger btn-lg" style="width:100%; padding:4px 5px;">보내기</button>
+          <%end%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

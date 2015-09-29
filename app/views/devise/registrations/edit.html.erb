@@ -1,0 +1,40 @@
+<div class="container each-container line">
+  <div class="col-sm-12" style="margin-top:40px; padding-left: 0px;">
+    <div class="menu">
+      <ul>
+        <li><a href="/mypage/me" class="active" >개인정보</a></li>
+        <li><a href="/mypage/shoppinglist" >쇼핑내역</a></li>
+        <li><a href="/mypage/exchange" >교환/환불</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" style="padding-top:63px; padding-left: 0px; padding-right: 0px;">
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6" align="center">
+
+      <h2><%= current_user.name%></h2>
+      <hr>
+      <%= bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>  
+        <%= f.password_field :current_password, label:"현재 비밀번호", autocomplete: "off" %>
+        <%= f.password_field :password, label:"새 비밀번호", autocomplete: "off" %>
+        <%= f.password_field :password_confirmation, label:"새 비밀번호 확인", autocomplete: "off" %>
+        <%= f.email_field :email, label:"이메일" %>
+        <%= f.text_field :phone, label:"휴대폰번호", placeholder:"ex)01012345678" %>
+        <%= f.text_field :address, label:"주소", placeholder:"ex)01012345678" %>
+        <!--<a href="#" style="line-height: 16px; padding: 5px 17px;" class="btn btn-default" data-confirm="구현중">휴대폰 인증</a>-->
+        <%= f.submit "수정하기" %>
+      <% end %>  
+      <!--
+      <h3>Cancel my account</h3>
+      <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+      -->
+      <%= link_to "Back", :back %>
+    </div>
+  </div>
+</div>
+
+

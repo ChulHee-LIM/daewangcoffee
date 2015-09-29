@@ -1,0 +1,232 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+}
+
+.topnav {
+    font-size: 14px; 
+}
+
+.lead {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.intro-header {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url('main6.JPG') no-repeat center center;
+    background-size: cover;
+}
+
+.intro-message {
+    position: relative;
+    padding-top: 12%;
+    padding-bottom: 8%;
+}
+
+.intro-message > h1 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 5em;
+}
+
+.intro-divider {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.intro-message > h3 {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+@media(max-width:767px) {
+    .intro-message {
+        padding-bottom: 15%;
+    }
+
+    .intro-message > h1 {
+        font-size: 3em;
+    }
+
+    ul.intro-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.intro-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+
+    .intro-divider {
+        width: 100%;
+    }
+}
+
+
+footer {
+    padding: 50px 0;
+    background-color: #fff;
+    border: 1px solid #e7e7e7; 
+    border-top-width: 1px; 
+}
+
+p.copyright {
+    margin: 15px 0 0;
+}
+
+
+/* containers */
+
+.container {
+    text-align:center;
+}
+
+.each-container {
+    padding:60px 0px;
+}
+
+
+/* navbar */
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    font-size: 20px; 
+    color: rgb(255,255,255);
+}
+
+
+.navbar-default {
+    background-image:none;
+    box-shadow:none;
+    background-color:rgba(0,0,0,0.4);
+    border-color: rgba(0,0,0,0);
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: rgb(255,255,255);
+    background-image:none;
+    box-shadow:none;
+    background-color: rgba(0,0,0,0);
+    border-bottom: 3px solid rgb(255,255,255);
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: rgb(255,255,255);
+    border-bottom: 3px solid rgba(0,0,0,0);
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: rgb(255,255,255);
+    border-bottom: 3px solid rgb(255,255,255);
+}
+
+/*devise alert*/
+.alert {
+    padding: 15px;
+    margin-bottom: -63px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-dismissable, .alert-dismissible {
+    padding-right: 35px;
+}
+
+.alert-alert {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+}
+.alert-alert hr {
+  border-top-color: #e6c1c7;
+}
+.alert-alert .alert-link {
+  color: #953b39;
+}
+.alert-notice {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+}
+.alert-notice hr {
+  border-top-color: #c9e2b3;
+}
+.alert-notice .alert-link {
+  color: #356635;
+}
+/*/devise alert*/
+
+/*디바이즈용*/
+.line{
+    border-width: 2px;
+    border-bottom-width:2px;
+    border-bottom-color:#c8ccc1;
+    border-bottom-style: solid;
+    padding-left: 0px;
+}
+.menu {
+   float:left;
+   background:#fff;
+   overflow:hidden;
+   position:relative;
+}
+.menu ul {
+   clear:left;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+   position:relative;
+   left:50%;
+}
+.menu ul li {
+   display:block;
+   float:left;
+   list-style:none;
+   margin-right:1em;
+   padding:0;
+   position:relative;
+   right:50%;
+   width:100px;
+   text-align: center;
+}
+.menu ul li a {
+   display:block;
+   margin:0 0 0 1px;
+   padding:3px 10px;
+   background:#c8ccc1;
+   color:#fff;
+   text-decoration:none;
+   line-height:1.3em;
+}
+.menu ul li a:hover {
+   text-decoration: none;
+   color:#fff;
+}
+.menu ul li a.active,
+.menu ul li a.active:hover {
+   background:#000;
+   font-weight:bold;
+}
+/*/디바이즈용*/
